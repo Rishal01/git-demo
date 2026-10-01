@@ -1,0 +1,373 @@
+/* ---------- General ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #26352a;
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 90px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-label {
+  color: #7a9b50;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 38px;
+  color: #263d29;
+}
+
+/* ---------- Navigation ---------- */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  height: 75px;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #426b38;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #26352a;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #7a9b50;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px 50px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content p:first-child {
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  line-height: 1.1;
+  margin: 15px 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: #6d8d45;
+  color: white;
+  padding: 13px 28px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4e6d32;
+  transform: translateY(-2px);
+}
+
+/* ---------- About ---------- */
+
+.about {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* ---------- Amenities ---------- */
+
+.amenities {
+  background: #f4f7ef;
+}
+
+.amenity-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.amenity-card {
+  background: white;
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.amenity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-card span {
+  font-size: 40px;
+}
+
+.amenity-card h3 {
+  margin: 15px 0 8px;
+}
+
+.amenity-card p {
+  color: #777;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Booking ---------- */
+
+.booking {
+  background: #f4f7ef;
+}
+
+.booking-form {
+  max-width: 700px;
+  margin: auto;
+
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.booking-form .btn {
+  grid-column: 1 / -1;
+}
+
+#message {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #4d7b3b;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  background: #263d29;
+  color: white;
+  padding: 40px 8%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+footer h3 {
+  margin-bottom: 8px;
+}
+
+footer p {
+  color: #d5dfd4;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .amenity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .amenity-grid,
+  .gallery-grid,
+  .booking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 350px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
